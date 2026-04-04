@@ -7,17 +7,17 @@
 .layout-content {
   flex: 1;
   overflow-y: auto;
-  padding-top: 4.5rem; /* clear the top nav */
+  padding-bottom: 4.5rem; /* clear the bottom nav */
 }
 
 .bottom-nav {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
   height: 4.5rem;
   z-index: 100;
 }
