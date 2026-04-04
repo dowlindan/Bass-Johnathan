@@ -1,0 +1,19 @@
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.placeholder-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+}
+
+.placeholder-text {
+  font-size: 1rem;
+  margin: 0;
+}
