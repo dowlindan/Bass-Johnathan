@@ -1,8 +1,10 @@
+import { lazy, Suspense } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Tuner from './pages/Tuner'
-import Intonation from './pages/Intonation'
-import SheetMusic from './pages/SheetMusic'
+
+const Intonation = lazy(() => import('./pages/Intonation'))
+const SheetMusic = lazy(() => import('./pages/SheetMusic'))
 
 export default function App() {
   return (
@@ -10,8 +12,16 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Tuner />} />
-          <Route path="/intonation" element={<Intonation />} />
-          <Route path="/sheet-music" element={<SheetMusic />} />
+          <Route path="/intonation" element={
+            <Suspense fallback={null}>
+              <Intonation />
+            </Suspense>
+          } />
+          <Route path="/sheet-music" element={
+            <Suspense fallback={null}>
+              <SheetMusic />
+            </Suspense>
+          } />
         </Routes>
       </Layout>
     </HashRouter>

@@ -1,0 +1,24 @@
+.score-viewer {
+  background: #f5f5f0;
+  border-radius: 12px;
+  margin: 1rem;
+  overflow: hidden;
+  /* abcjs SVG elements inherit `color` via currentColor;
+     reset here so they render black against the light background */
+  color: #1a1a1a;
+}
+
+.score-viewer svg path,
+.score-viewer svg line,
+.score-viewer svg rect,
+.score-viewer svg ellipse,
+.score-viewer svg polygon {
+  fill: #1a1a1a;
+  stroke: #1a1a1a;
+}
+
+/* Text should not be stroked — stroke creates an unwanted outline on annotations */
+.score-viewer svg text {
+  fill: #1a1a1a;
+  stroke: none;
+}

@@ -1,0 +1,212 @@
+.intonation {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-height: 100%;
+}
+
+/* ── Exercise list ── */
+.exercise-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exercise-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.exercise-item--active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.exercise-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.exercise-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ── BPM control ── */
+.bpm-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bpm-label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.bpm-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bpm-step {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bpm-input {
+  width: 5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-family: inherit;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.bpm-input::-webkit-outer-spin-button,
+.bpm-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ── Action button ── */
+.action-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.action-btn--secondary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* ── Recording view ── */
+.recording-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.recording-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f44336;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ── Countdown ── */
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.count-num {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-border);
+  transition: color 0.05s ease;
+  font-variant-numeric: tabular-nums;
+}
+
+.count-num--active {
+  color: var(--color-primary);
+}
+
+/* ── Bar / beat position ── */
+.record-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.record-bar {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.record-elapsed {
+  font-size: 1rem;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Results view ── */
+.results-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Notes / errors ── */
+.intonation-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.intonation-error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin: 0;
+}

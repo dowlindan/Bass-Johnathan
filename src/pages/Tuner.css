@@ -1,0 +1,46 @@
+.tuner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+  gap: 0.25rem;
+}
+
+.tuner-svg {
+  width: 100%;
+  max-width: 380px;
+}
+
+.tuner-note {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-top: -0.5rem;
+}
+
+.note-name {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.note-octave {
+  font-size: 2rem;
+  color: var(--color-muted);
+  padding-bottom: 0.3rem;
+}
+
+.note-idle {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.tuner-cents {
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  transition: color 0.15s ease;
+}
